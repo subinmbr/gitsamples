@@ -11,10 +11,15 @@ public class sampleTwo {
 	WebDriver driver= new ChromeDriver();
 	
   @Test(retryAnalyzer = RetryAnalyzer.class)
-  public void searchtest() {
+  public void searchtest() throws InterruptedException {
 	  
 	  driver.get("https://www.google.co.in/");
-	  driver.findElement(By.cssSelector("#APjFqwwb"));
+	  driver.findElement(By.cssSelector("#APjFqb")).sendKeys("hi");
+	  
+	  
+	  //token  - - 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
+	 Thread.sleep(2000);
+	 
 	  driver.close();
 	  
 	  
